@@ -48,8 +48,9 @@ const renderBusData = (buses) => {
     });
 };
 
+// после деплоя проекта на render.com, возможно нужно будет поменять ws на wss
 const initWebSocket = () => {
-    const ws = new WebSocket(`ws://${location.host}`);
+    const ws = new WebSocket(`wss://${location.host}`);
 
     ws.addEventListener('open', () => {
         console.log('WebSocket connection');
